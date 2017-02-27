@@ -1,7 +1,7 @@
 FROM debian:wheezy
 MAINTAINER gaoal "keepob@163.com"
 
-ADD sources.list /etc/apt/sources.list
+#ADD sources.list /etc/apt/sources.list
 ADD run.sh /run.sh
 
 RUN apt-get update && \
@@ -11,7 +11,7 @@ RUN apt-get update && \
     dpkg -i firefox27.deb && \
     apt-get install flashplugin-nonfree libasound2 libdbus-glib-1-2 -y && \
     chmod 755 /run.sh && \
-    apt-get install flashplugin-nonfree -y && \
+    #apt-get install flashplugin-nonfree -y && \
     rm -rf /var/lib/apt/lists/* && \
     cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
