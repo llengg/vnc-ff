@@ -1,7 +1,7 @@
 FROM debian:wheezy
 MAINTAINER gaoal "keepob@163.com"
 
-#ADD sources.list /etc/apt/sources.list
+ADD sources.list /etc/apt/sources.list
 ADD run.sh /run.sh
 
 RUN apt-get update && \
