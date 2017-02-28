@@ -9,7 +9,6 @@ RUN apt-get update && \
     mkdir -p /var/run/sshd;cd /root && \
     wget -O firefox27.deb http://dl.reone.win/files/firefox27.deb && \
     dpkg -i firefox27.deb && \
-    apt-get install flashplugin-nonfree -y && \
     chmod 755 /run.sh && \
     rm -rf /var/lib/apt/lists/* && \
     cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
