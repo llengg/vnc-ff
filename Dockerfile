@@ -5,7 +5,7 @@ ADD sources.list /etc/apt/sources.list
 ADD run.sh /run.sh
 
 RUN apt-get update && \
-    apt-get -y install openssh-server openbox thunar tint2 vnc4server vim screen wget libasound2 libdbus-glib-1-2 && \
+    apt-get -y install openssh-server openbox thunar tint2 vnc4server vim screen wget libasound2 libdbus-glib-1-2 libgtk-3-0 && \
     mkdir -p /var/run/sshd;cd /root && \
     wget -O firefox27.deb http://dl.reone.win/files/firefox27.deb && \
     dpkg -i firefox27.deb && \
